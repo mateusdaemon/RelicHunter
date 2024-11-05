@@ -1,5 +1,7 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -17,13 +19,17 @@ public class PlayerMove : MonoBehaviour
     {
         if (direction.magnitude > 0)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+            Vector3 camForward = Camera.main.transform.forward;
+            Vector3 camRight = Camera.main.transform.right;
 
-            float yVelocity = rb.velocity.y;
+            camForward.y = 0;
+            camForward.Normalize();
+
+            direction = camForward * direction.z + camRight * direction.x;
+            direction.Normalize();
 
             Vector3 horizontalVelocity = direction * moveSpeed;
-            rb.velocity = new Vector3(horizontalVelocity.x, yVelocity, horizontalVelocity.z);
+            rb.velocity = new Vector3(horizontalVelocity.x, rb.velocity.y, horizontalVelocity.z);
         }
         else
         {
