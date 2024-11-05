@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     private PlayerMove playerMove;
     private PlayerJump playerJump;
     private PlayerOrient playerOrient;
+    private PlayerAnim playerAnim;
+    private PlayerState playerState;
 
     private void Awake()
     {
@@ -15,6 +17,10 @@ public class Player : MonoBehaviour
         playerMove = GetComponent<PlayerMove>();
         playerJump = GetComponent<PlayerJump>();
         playerOrient = GetComponent<PlayerOrient>();
+        playerAnim = GetComponent<PlayerAnim>();
+        playerState = GetComponent<PlayerState>();
+
+        playerState.OnStateChange += playerAnim.SetAnim;
     }
 
     // Update is called once per frame
