@@ -2,18 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerOrient : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 5f;
-    private Rigidbody rb;
-
+    private Transform playerTransform;
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        playerTransform = transform;
     }
-
-    public void Move(Vector3 direction)
+    public void Orient(Vector3 direction)
     {
         if (direction.magnitude > 0)
         {
@@ -22,15 +18,12 @@ public class PlayerMove : MonoBehaviour
 
             camForward.y = 0;
             camForward.Normalize();
+
             direction = camForward * direction.z + camRight * direction.x;
             direction.Normalize();
 
-            Vector3 horizontalVelocity = direction * moveSpeed;
-            rb.velocity = new Vector3(horizontalVelocity.x, rb.velocity.y, horizontalVelocity.z);
-        }
-        else
-        {
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation, targetRotation, Time.deltaTime * 100);
         }
     }
 }
