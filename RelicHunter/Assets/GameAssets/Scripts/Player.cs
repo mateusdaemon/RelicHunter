@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private PlayerAnim playerAnim;
     private PlayerState playerState;
     private PlayerRun playerRun;
-    private PlayerSllow playerSlow;
+    private PlayerSlow playerSlow;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         playerAnim = GetComponent<PlayerAnim>();
         playerState = GetComponent<PlayerState>();
         playerRun = GetComponent<PlayerRun>();
-        playerSlow = GetComponent<PlayerSllow>();
+        playerSlow = GetComponent<PlayerSlow>();
 
         playerState.OnStateChange += playerAnim.SetAnim;
     }

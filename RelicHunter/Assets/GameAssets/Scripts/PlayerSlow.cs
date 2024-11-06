@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSllow : MonoBehaviour
+public class PlayerSlow : MonoBehaviour
 {
     [SerializeField] private float slowSpeedMultiplier = 0.5f;
     private PlayerMove playerMove;
