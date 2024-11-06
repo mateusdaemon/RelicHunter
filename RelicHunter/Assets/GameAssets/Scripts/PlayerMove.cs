@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float BaseSpeed { get; private set; } = 5f;
-    public float MoveSpeed { get; set; }
+    public float MoveSpeed { get; set; } = 5f;
 
     private Rigidbody rb;
     private PlayerState playerState;

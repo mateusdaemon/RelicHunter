@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerOrient : MonoBehaviour
 {
     private Transform playerTransform;
+    [SerializeField]private float orientationSpeed = 60;
     private void Awake()
     {
         playerTransform = transform;
@@ -23,7 +24,7 @@ public class PlayerOrient : MonoBehaviour
             direction.Normalize();
 
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-            playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation, targetRotation, Time.deltaTime * 100);
+            playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation, targetRotation, Time.deltaTime * orientationSpeed);
         }
     }
 }
