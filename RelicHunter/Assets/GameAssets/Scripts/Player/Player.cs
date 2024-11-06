@@ -27,7 +27,10 @@ public class Player : MonoBehaviour
         playerTakeRune = GetComponent<PlayerTakeRune>();
 
         playerState.OnStateChange += playerAnim.SetAnim;
+    }
 
+    private void Start()
+    {
         Rune activeRune = GameManager.Instance.Inventory.GetActiveRune();
         if (activeRune != Rune.None)
         {

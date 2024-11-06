@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SO_Inventory", menuName = "ScriptableObjects/SO_Inventory")]
 public class SO_Inventory : ScriptableObject, ISerializationCallbackReceiver
 {
-    public Rune activeRune;
+    public Rune activeRune = Rune.None;
 
     public void OnAfterDeserialize()
     {

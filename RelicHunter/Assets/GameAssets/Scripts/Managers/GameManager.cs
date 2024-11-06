@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
+        Cursor.visible = false;
     }
 
     public void CollectRune(Rune runeType)
