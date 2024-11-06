@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private PlayerOrient playerOrient;
     private PlayerAnim playerAnim;
     private PlayerState playerState;
+    private PlayerRun playerRun;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
         playerOrient = GetComponent<PlayerOrient>();
         playerAnim = GetComponent<PlayerAnim>();
         playerState = GetComponent<PlayerState>();
+        playerRun = GetComponent<PlayerRun>();
 
         playerState.OnStateChange += playerAnim.SetAnim;
     }
@@ -30,11 +32,13 @@ public class Player : MonoBehaviour
         {
             playerJump.Jump();
         }
+
+        playerRun.Run(playerInput.RunInput);
     }
 
     private void FixedUpdate()
     {
-        playerMove.Move(playerInput.MoveInputDirection);
+        playerMove.Move(playerInput.MoveInputDirection, playerInput.CrouchInput, playerInput.RunInput);
         playerOrient.Orient(playerInput.MoveInputDirection);
     }
 }

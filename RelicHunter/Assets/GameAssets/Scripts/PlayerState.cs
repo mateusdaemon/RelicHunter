@@ -10,6 +10,9 @@ public enum State
     Run,
     Hit,
     Death,
+    Crouch,
+    CrouchWalk,
+    Jump,
     None
 }
 
@@ -31,10 +34,16 @@ public class PlayerState : MonoBehaviour
                 State = State.Walk;
                 break;
             case State.Run:
-                State = State.Walk;
+                State = State.Run;
                 break;
             case State.Idle:
                 State = State.Idle;
+                break;
+            case State.Crouch:
+                State = State.Crouch;
+                break;
+            case State.CrouchWalk:
+                State = State.CrouchWalk;
                 break;
             case State.Hit:
                 State = State.Hit;

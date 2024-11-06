@@ -6,6 +6,8 @@ public class PlayerInput : MonoBehaviour
 {
     public Vector3 MoveInputDirection { get; private set; }
     public bool JumpInput { get; private set; }
+    public bool CrouchInput { get; private set; }
+    public bool RunInput { get; private set; }
 
     private void Update()
     {
@@ -17,5 +19,11 @@ public class PlayerInput : MonoBehaviour
         MoveInputDirection = new Vector3(horizontal, 0, vertical).normalized;
 
         JumpInput = Input.GetKeyDown(KeyCode.Space);
+        CrouchInput = Input.GetKey(KeyCode.C);
+        RunInput = Input.GetKey(KeyCode.LeftShift);
+
+        Debug.Log(JumpInput);
+        Debug.Log(CrouchInput);
+        Debug.Log(RunInput);
     }
 }

@@ -4,38 +4,42 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 5f;
+    public float BaseSpeed { get; private set; } = 5f;
+    public float MoveSpeed { get; set; }
+
     private Rigidbody rb;
     private PlayerState playerState;
+    private PlayerInput playerInput;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         playerState = GetComponent<PlayerState>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
-    public void Move(Vector3 direction)
+    public void Move(Vector3 direction, bool crouch, bool run)
     {
         if (direction.magnitude > 0)
         {
             Vector3 camForward = Camera.main.transform.forward;
             Vector3 camRight = Camera.main.transform.right;
-
             camForward.y = 0;
             camForward.Normalize();
+
             direction = camForward * direction.z + camRight * direction.x;
             direction.Normalize();
 
-            Vector3 horizontalVelocity = Vector3.zero;
+            Vector3 horizontalVelocity = direction * MoveSpeed;
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (run)
             {
-                horizontalVelocity = direction * moveSpeed * 1.6f;
                 playerState.ChangeState(State.Run);
+            } else if (crouch)
+            {
+                playerState.ChangeState(State.CrouchWalk);
             } else
             {
-                horizontalVelocity = direction * moveSpeed;
                 playerState.ChangeState(State.Walk);
             }
 
@@ -44,7 +48,15 @@ public class PlayerMove : MonoBehaviour
         else
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
-            playerState.ChangeState(State.Idle);
+
+            if (crouch)
+            {
+                playerState.ChangeState(State.Crouch);
+            } else
+            {
+
+                playerState.ChangeState(State.Idle);
+            }
         }
     }
 }

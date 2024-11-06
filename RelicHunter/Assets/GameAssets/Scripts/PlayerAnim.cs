@@ -16,6 +16,8 @@ public class PlayerAnim : MonoBehaviour
         animator.SetBool("walk", false);
         animator.SetBool("idle", false);
         animator.SetBool("run", false);
+        animator.SetBool("crouch", false);
+        animator.SetBool("crouchWalk", false);
 
         switch (state)
         {
@@ -27,6 +29,15 @@ public class PlayerAnim : MonoBehaviour
                 break;
             case State.Run:
                 animator.SetBool("run", true);
+                break;
+            case State.Crouch:
+                animator.SetBool("crouch", true);
+                break;
+            case State.CrouchWalk:
+                animator.SetBool("crouchWalk", true);
+                break;
+            case State.Jump:
+                animator.SetTrigger("jump");
                 break;
             case State.Hit:
                 break;

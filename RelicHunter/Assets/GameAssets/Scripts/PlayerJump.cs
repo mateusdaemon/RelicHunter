@@ -21,7 +21,6 @@ public class PlayerJump : MonoBehaviour
     {
         if (IsGrounded())
         {
-            Debug.Log("Is groundddd");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
@@ -29,16 +28,5 @@ public class PlayerJump : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
-    }
-
-    private void OnDrawGizmos()
-    {
-        // Set the color for the gizmo
-        Gizmos.color = Color.red;
-
-        // Draw the ray from the player's position downwards
-        Vector3 origin = transform.position;
-        Vector3 direction = Vector3.down * groundCheckDistance;
-        Gizmos.DrawLine(origin, origin + direction);
     }
 }
