@@ -6,12 +6,13 @@ using static UnityEngine.Rendering.DebugUI;
 public class PlayerJump : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private LayerMask groundLayer; // Define the ground layer in the inspector
-    [SerializeField] private float groundCheckDistance = 0.1f; // Adjust as needed for accurate ground detection
+    [SerializeField] private LayerMask groundLayer; // Layer assigned to ground
+    [SerializeField] private Transform groundCheck; // Empty object at the feet of the player
+    [SerializeField] private float groundCheckRadius = 0.3f; // Radius of the ground check sphere
 
     private Rigidbody rb;
     private PlayerState playerState;
-    private RaycastHit hit;
+    private bool isGrounded;
 
     private void Awake()
     {
@@ -19,38 +20,37 @@ public class PlayerJump : MonoBehaviour
         playerState = GetComponent<PlayerState>();
     }
 
+    private void Update()
+    {
+        CheckGroundStatus();
+    }
+
     public void Jump()
     {
-        if (IsGrounded())
+        if (isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             playerState.ChangeState(State.Jump);
-            
-        } else
-        {
-            Debug.Log("im not grounded");
-        }
-    }
-
-    private bool IsGrounded()
-    {
-        return Physics.SphereCast(transform.position, transform.localScale.x / 2, -Vector3.up, out hit, groundCheckDistance);
-    }
-
-    private void OnDrawGizmos()
-    {
-        bool isGrounded = Physics.SphereCast(transform.position, transform.localScale.x / 2 * 3, -Vector3.up, out hit, groundCheckDistance);
-
-        if (isGrounded)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(transform.position, -Vector3.up * groundCheckDistance);
-            Gizmos.DrawWireSphere(transform.position + (-Vector3.up * hit.distance), transform.localScale.x / 2);
+            isGrounded = false; // Prevents immediate re-jumping
         }
         else
         {
-            Gizmos.color = Color.green;
-            Gizmos.DrawRay(transform.position, -(Vector3.up * groundCheckDistance + (Vector3.up * transform.localScale.x / 2)));
+            Debug.Log("Player is not grounded, cannot jump.");
+        }
+    }
+
+    private void CheckGroundStatus()
+    {
+        // Detect if the player is touching the ground using CheckSphere
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = isGrounded ? Color.green : Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
 }

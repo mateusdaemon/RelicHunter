@@ -49,6 +49,9 @@ public class PlayerState : MonoBehaviour
             case State.SlowWalk:
                 State = State.SlowWalk;
                 break;
+            case State.Jump:
+                State = State.Jump;
+                break;
             case State.Hit:
                 State = State.Hit;
                 break;
