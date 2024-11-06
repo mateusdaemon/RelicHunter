@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private PlayerState playerState;
     private PlayerRun playerRun;
     private PlayerSlow playerSlow;
+    private PlayerTakeRune playerTakeRune;
 
     private void Awake()
     {
@@ -23,8 +24,15 @@ public class Player : MonoBehaviour
         playerState = GetComponent<PlayerState>();
         playerRun = GetComponent<PlayerRun>();
         playerSlow = GetComponent<PlayerSlow>();
+        playerTakeRune = GetComponent<PlayerTakeRune>();
 
         playerState.OnStateChange += playerAnim.SetAnim;
+
+        Rune activeRune = GameManager.Instance.Inventory.GetActiveRune();
+        if (activeRune != Rune.None)
+        {
+            playerTakeRune.TakeRune(activeRune);
+        }
     }
 
     // Update is called once per frame
