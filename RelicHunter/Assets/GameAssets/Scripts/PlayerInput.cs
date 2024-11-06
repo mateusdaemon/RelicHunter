@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour
     public bool JumpInput { get; private set; }
     public bool CrouchInput { get; private set; }
     public bool RunInput { get; private set; }
+    public bool SlowWalkInput { get; private set; }
 
     private void Update()
     {
@@ -21,9 +22,6 @@ public class PlayerInput : MonoBehaviour
         JumpInput = Input.GetKeyDown(KeyCode.Space);
         CrouchInput = Input.GetKey(KeyCode.C);
         RunInput = Input.GetKey(KeyCode.LeftShift);
-
-        Debug.Log(JumpInput);
-        Debug.Log(CrouchInput);
-        Debug.Log(RunInput);
+        SlowWalkInput = Input.GetKey(KeyCode.LeftControl);
     }
 }

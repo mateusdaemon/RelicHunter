@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private PlayerAnim playerAnim;
     private PlayerState playerState;
     private PlayerRun playerRun;
+    private PlayerSllow playerSlow;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
         playerAnim = GetComponent<PlayerAnim>();
         playerState = GetComponent<PlayerState>();
         playerRun = GetComponent<PlayerRun>();
+        playerSlow = GetComponent<PlayerSllow>();
 
         playerState.OnStateChange += playerAnim.SetAnim;
     }
@@ -34,11 +36,12 @@ public class Player : MonoBehaviour
         }
 
         playerRun.Run(playerInput.RunInput);
+        playerSlow.Slow(playerInput.SlowWalkInput);
     }
 
     private void FixedUpdate()
     {
-        playerMove.Move(playerInput.MoveInputDirection, playerInput.CrouchInput, playerInput.RunInput);
+        playerMove.Move(playerInput.MoveInputDirection, playerInput.CrouchInput, playerInput.RunInput, playerInput.SlowWalkInput);
         playerOrient.Orient(playerInput.MoveInputDirection);
     }
 }

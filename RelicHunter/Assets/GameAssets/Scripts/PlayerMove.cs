@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
     }
 
-    public void Move(Vector3 direction, bool crouch, bool run)
+    public void Move(Vector3 direction, bool crouch, bool run, bool slowWalk)
     {
         if (direction.magnitude > 0)
         {
@@ -38,6 +38,10 @@ public class PlayerMove : MonoBehaviour
             } else if (crouch)
             {
                 playerState.ChangeState(State.CrouchWalk);
+            } else if (slowWalk)
+            {
+                playerState.ChangeState(State.SlowWalk);
+
             } else
             {
                 playerState.ChangeState(State.Walk);
