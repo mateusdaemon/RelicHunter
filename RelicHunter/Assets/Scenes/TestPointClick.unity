@@ -997,11 +997,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPC
       objectReference: {fileID: 0}
-    - target: {fileID: 5565998337363800315, guid: ff7b1c3fc44394d4f91055f6407bc35d,
-        type: 3}
-      propertyPath: m_AngularSpeed
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 6754182393392873074, guid: ff7b1c3fc44394d4f91055f6407bc35d,
         type: 3}
       propertyPath: m_LocalPosition.x
