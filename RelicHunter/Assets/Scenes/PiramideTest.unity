@@ -4389,16 +4389,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerBlend
       objectReference: {fileID: 0}
-    - target: {fileID: 5129043569069618038, guid: b095f6b283d61c74abeb10c6d9381ffd,
-        type: 3}
-      propertyPath: fallMultiplier
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5129043569069618038, guid: b095f6b283d61c74abeb10c6d9381ffd,
-        type: 3}
-      propertyPath: lowJumpMultiplier
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5690606148957205005, guid: b095f6b283d61c74abeb10c6d9381ffd,
         type: 3}
       propertyPath: m_LocalPosition.x

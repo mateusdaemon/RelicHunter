@@ -844,6 +844,8 @@ MonoBehaviour:
     m_Bits: 8
   groundCheck: {fileID: 5099626721601060050}
   groundCheckRadius: 0.3
+  fallMultiplier: 0
+  lowJumpMultiplier: 0.5
 --- !u!1 &3803003513418238112
 GameObject:
   m_ObjectHideFlags: 0
