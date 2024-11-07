@@ -5,12 +5,17 @@ using UnityEngine;
 public class ZombieBehavior : MonoBehaviour
 {
     private ZombieDetectPlayer detectPlayer; // Reference to player detection component
+    private ZombieAttack zombieAttack;
+    private ZombieAnim zombieAnim;
     private Pursue pursueScript; // Reference to the Pursue3D script
     private Patrol patrolScript; // Reference to the Patrol3D script
+    private bool isAttacking = false;
 
     private void Awake()
     {
         detectPlayer = GetComponent<ZombieDetectPlayer>();
+        zombieAttack = GetComponent<ZombieAttack>();
+        zombieAnim = GetComponent<ZombieAnim>();
         pursueScript = GetComponent<Pursue>();
         patrolScript = GetComponent<Patrol>();
     }
@@ -24,17 +29,31 @@ public class ZombieBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (detectPlayer.IsPlayerInRange)
+        if (!isAttacking)
         {
-            // If the player is in range, pursue the player
-            pursueScript.enabled = true;
-            patrolScript.enabled = false;
+            if (detectPlayer.IsPlayerInRange)
+            {
+                pursueScript.enabled = true;
+                patrolScript.enabled = false;
+            } else {
+                pursueScript.enabled = false;
+                patrolScript.enabled = true;
+            }
+
+            if (detectPlayer.IsPlayerAttackable)
+            {
+                pursueScript.enabled = false;
+                patrolScript.enabled = false;
+                isAttacking = true;
+                Invoke("ResetAttack", 1f);
+                zombieAnim.SetAnim(State.Attack);
+                zombieAttack.Attack();
+            }
         }
-        else
-        {
-            // Otherwise, continue patrolling
-            pursueScript.enabled = false;
-            patrolScript.enabled = true;
-        }
+    }
+
+    private void ResetAttack()
+    {
+        isAttacking = false;
     }
 }

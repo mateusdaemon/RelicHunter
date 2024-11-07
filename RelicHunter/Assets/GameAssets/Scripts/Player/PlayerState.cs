@@ -14,6 +14,7 @@ public enum State
     CrouchWalk,
     SlowWalk,
     Jump,
+    Attack,
     None
 }
 

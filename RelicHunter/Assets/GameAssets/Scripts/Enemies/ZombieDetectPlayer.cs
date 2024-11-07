@@ -6,8 +6,10 @@ public class ZombieDetectPlayer : MonoBehaviour
 {
     private GameObject player; // Reference to the player GameObject
     [SerializeField]private float detectionRadius = 10f; // Detection radius within which the zombie will detect the player
+    [SerializeField]private float attackRadius = 2f; // Detection radius within which the zombie will detect the player
 
     public bool IsPlayerInRange {  get; private set; }
+    public bool IsPlayerAttackable {  get; private set; }
 
     private void Start()
     {
@@ -26,5 +28,6 @@ public class ZombieDetectPlayer : MonoBehaviour
         // Check if the player is within detection range
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         IsPlayerInRange = distanceToPlayer <= detectionRadius;
+        IsPlayerAttackable = distanceToPlayer <= attackRadius;
     }
 }
