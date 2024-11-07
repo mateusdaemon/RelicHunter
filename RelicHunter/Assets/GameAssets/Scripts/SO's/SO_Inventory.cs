@@ -6,10 +6,12 @@ using UnityEngine;
 public class SO_Inventory : ScriptableObject, ISerializationCallbackReceiver
 {
     public Rune activeRune = Rune.None;
+    public int runesCollected = 0;
 
     public void OnAfterDeserialize()
     {
         activeRune = Rune.None;
+        runesCollected = 0;
     }
 
     public void OnBeforeSerialize()

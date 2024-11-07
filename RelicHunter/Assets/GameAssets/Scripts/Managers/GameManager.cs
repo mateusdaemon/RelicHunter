@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,8 +22,11 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
 
-        Cursor.visible = false;
+    private void Start()
+    {
+        CheckEnableCursor(SceneManager.GetActiveScene().name);
     }
 
     public void CollectRune(Rune runeType)
@@ -39,6 +43,20 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        CheckEnableCursor(sceneName);
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void CheckEnableCursor(string scene)
+    {
+        if (scene == "TestPointClick")
+            Cursor.visible = true;
+        else 
+            Cursor.visible = false;
+    }
+
+    internal void PlaceNewRune(Rune rune)
+    {
+        
     }
 }
