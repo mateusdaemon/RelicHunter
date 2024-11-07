@@ -838,14 +838,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae45ad8c2ca3bb4180cb4d6c38c15eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 25
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 5099626721601060050}
   groundCheckRadius: 0.3
-  fallMultiplier: 0
-  lowJumpMultiplier: 0.5
+  fallMultiplier: 0.5
+  lowJumpMultiplier: 1.5
 --- !u!1 &3803003513418238112
 GameObject:
   m_ObjectHideFlags: 0

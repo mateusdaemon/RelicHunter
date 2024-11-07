@@ -1130,7 +1130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1905466236842068726
 Transform:
   m_ObjectHideFlags: 0
@@ -1263,6 +1263,8 @@ MonoBehaviour:
     m_Bits: 8
   groundCheck: {fileID: 5869823924031324059}
   groundCheckRadius: 0.15
+  fallMultiplier: 0
+  lowJumpMultiplier: 0
 --- !u!114 &319911581697684650
 MonoBehaviour:
   m_ObjectHideFlags: 0
