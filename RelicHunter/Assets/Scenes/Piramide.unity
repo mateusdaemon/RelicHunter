@@ -699,11 +699,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7271449666460269675, guid: 9d55c496adb417447a4c185d1506ccec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5971410051629635644, guid: 9d55c496adb417447a4c185d1506ccec,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: decef48b3742ca44fa60d9d5478f312a, type: 2}
+    - target: {fileID: -2045257923548263128, guid: 9d55c496adb417447a4c185d1506ccec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 322430391195427292, guid: 9d55c496adb417447a4c185d1506ccec,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -718,6 +728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blocagem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107236393502294672, guid: 9d55c496adb417447a4c185d1506ccec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7653977287501116505, guid: 9d55c496adb417447a4c185d1506ccec,
         type: 3}
