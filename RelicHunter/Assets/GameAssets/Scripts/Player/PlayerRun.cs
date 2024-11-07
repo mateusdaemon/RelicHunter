@@ -9,9 +9,10 @@ public class PlayerRun : MonoBehaviour
     [SerializeField] private float runSpeedMultiplier = 3f;
 
     private PlayerMove playerMove;
-    private float maxEnergy = 30;
-    private float currEnergy = 30;
+    private float maxEnergy = 15;
+    private float currEnergy = 15;
     private bool energyWaste = false;
+    private bool canRunAgain = true;
 
     private void Awake()
     {
@@ -41,19 +42,30 @@ public class PlayerRun : MonoBehaviour
         HudManager.Instance.SetEnergyAmount(currEnergy / maxEnergy);
     }
 
-    public void Run(bool isRunning)
+    public bool Run(bool isRunning)
     {
+        if (currEnergy <= 0 || !canRunAgain) return false;
+
         energyWaste = isRunning;
 
         if (isRunning)
         {
             playerMove.MoveSpeed = playerMove.BaseSpeed * runSpeedMultiplier;
-        }        
+        }
+
+        return true;
     }
 
     private void StopRunning()
     {
         energyWaste = false;
+        canRunAgain = false;
         playerMove.MoveSpeed = playerMove.BaseSpeed;
+        Invoke("EnableRunAgain", 3f);
+    }
+
+    private void EnableRunAgain()
+    {
+        canRunAgain = true;
     }
 }

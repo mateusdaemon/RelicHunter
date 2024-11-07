@@ -14,6 +14,8 @@ public class PlayerBlend : MonoBehaviour
     private PlayerMove playerMove;
     private PlayerJump playerJump;
 
+    private bool runEnable = false;
+
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -47,13 +49,13 @@ public class PlayerBlend : MonoBehaviour
             playerJump.Jump();
         }
 
-        playerRun.Run(playerInput.RunInput);
+        runEnable = playerRun.Run(playerInput.RunInput);
         playerSlow.Slow(playerInput.SlowWalkInput);
     }
 
     private void FixedUpdate()
     {
-        playerMove.Move(playerInput.MoveInputDirection, playerInput.CrouchInput, playerInput.RunInput, playerInput.SlowWalkInput);
+        playerMove.Move(playerInput.MoveInputDirection, playerInput.CrouchInput, runEnable, playerInput.SlowWalkInput);
         playerOrient.Orient(playerInput.MoveInputDirection);
     }
 }
