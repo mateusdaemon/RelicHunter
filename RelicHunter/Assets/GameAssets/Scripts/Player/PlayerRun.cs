@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerRun : MonoBehaviour
 {
-    [SerializeField] private float runSpeedMultiplier = 1.5f;
+    [SerializeField] private float runSpeedMultiplier = 3f;
     private PlayerMove playerMove;
 
     private void Awake()

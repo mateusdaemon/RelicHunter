@@ -5,17 +5,17 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float BaseSpeed { get; private set; } = 5f;
-    public float MoveSpeed { get; set; } = 5f;
+    public float MoveSpeed { get; set; }
 
     private Rigidbody rb;
     private PlayerState playerState;
-    private PlayerInput playerInput;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         playerState = GetComponent<PlayerState>();
-        playerInput = GetComponent<PlayerInput>();
+
+        MoveSpeed = 5;
     }
 
     public void Move(Vector3 direction, bool crouch, bool run, bool slowWalk)
@@ -30,8 +30,6 @@ public class PlayerMove : MonoBehaviour
             direction = camForward * direction.z + camRight * direction.x;
             direction.Normalize();
 
-            Vector3 horizontalVelocity = direction * MoveSpeed;
-
             if (run)
             {
                 playerState.ChangeState(State.Run);
@@ -44,8 +42,11 @@ public class PlayerMove : MonoBehaviour
 
             } else
             {
+                MoveSpeed = BaseSpeed;
                 playerState.ChangeState(State.Walk);
             }
+
+            Vector3 horizontalVelocity = direction * MoveSpeed;
 
             rb.velocity = new Vector3(horizontalVelocity.x, rb.velocity.y, horizontalVelocity.z);
         }

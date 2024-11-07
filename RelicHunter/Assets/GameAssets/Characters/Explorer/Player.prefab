@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d510b9febea82f44aba4c932c6f055f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeedMultiplier: 1.5
+  runSpeedMultiplier: 3
 --- !u!114 &2205418712799539396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eef94c0b1688a749a1af664e4414897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowSpeedMultiplier: 0.5
+  slowSpeedMultiplier: 0.1
 --- !u!114 &131263274328739579
 MonoBehaviour:
   m_ObjectHideFlags: 0
