@@ -53,7 +53,7 @@ public class PlayerRun : MonoBehaviour
             playerMove.MoveSpeed = playerMove.BaseSpeed * runSpeedMultiplier;
         }
 
-        return true;
+        return isRunning;
     }
 
     private void StopRunning()
