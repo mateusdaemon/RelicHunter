@@ -8,6 +8,7 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public SO_Inventory Inventory;
+    public SO_PlayerData PlayerData;
 
     public static GameManager Instance { get; private set; }
 
@@ -55,7 +56,24 @@ public class GameManager : MonoBehaviour
             Cursor.visible = false;
     }
 
-    internal void PlaceNewRune(Rune rune)
+    internal void PlaceNewRune(Rune runeType)
+    {
+        Inventory.runesCollected++;
+
+        var player = FindObjectsOfType<MonoBehaviour>().OfType<ITakeRune>();
+
+        foreach (var rune in player)
+        {
+            rune.DropActiveRune();
+        }
+    }
+
+    internal void PlayerTakeDamage(float damage)
+    {
+        PlayerData.life-=damage;
+    }
+
+    internal void PlayerDied()
     {
         
     }

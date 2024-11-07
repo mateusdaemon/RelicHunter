@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 11400000, guid: 75f29e5c5ef86d046a1a1efac7aee872, type: 2}
+  PlayerData: {fileID: 11400000, guid: 4d8bf4c60af3cda459d697850691a0d2, type: 2}

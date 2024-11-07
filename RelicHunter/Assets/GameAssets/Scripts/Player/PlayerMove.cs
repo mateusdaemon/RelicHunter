@@ -35,6 +35,7 @@ public class PlayerMove : MonoBehaviour
                 playerState.ChangeState(State.Run);
             } else if (crouch)
             {
+                MoveSpeed = BaseSpeed * 0.6f;
                 playerState.ChangeState(State.CrouchWalk);
             } else if (slowWalk)
             {
