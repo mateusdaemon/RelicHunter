@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class PlayerJump : MonoBehaviour
     private PlayerState playerState;
     private bool isGrounded;
 
+    public float fallMultiplier;
+    public float lowJumpMultiplier;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -23,6 +27,27 @@ public class PlayerJump : MonoBehaviour
     private void Update()
     {
         CheckGroundStatus();
+    }
+
+    private void FixedUpdate()
+    {
+        if (!isGrounded)
+        {
+            HandleFalling();
+        }
+    }
+
+    private void HandleFalling()
+    {
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector3.up * (-fallMultiplier);
+        }
+        else if (rb.velocity.y > 0)
+        {
+            rb.velocity += Vector3.up * (-lowJumpMultiplier);
+        }
+
     }
 
     public void Jump()
