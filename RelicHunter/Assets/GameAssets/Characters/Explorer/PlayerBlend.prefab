@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 758073175419314186}
   - component: {fileID: 5129043569069618038}
   - component: {fileID: 4082400487230838269}
-  - component: {fileID: 9036683075645915275}
+  - component: {fileID: 6567507794860124699}
   m_Layer: 7
   m_Name: PlayerBlend
   m_TagString: Player
@@ -866,7 +866,7 @@ MonoBehaviour:
   firstRune: {fileID: 856757638674830820}
   secondRune: {fileID: 7326433495193895040}
   thirdRune: {fileID: 6005900031230662632}
---- !u!114 &9036683075645915275
+--- !u!114 &6567507794860124699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3557472511802277737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b9689abffd92e4e9d9ff8f6a61aab6, type: 3}
+  m_Script: {fileID: 11500000, guid: c3e80ffbf2db38741bd31ca6fdb4c7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3803003513418238112

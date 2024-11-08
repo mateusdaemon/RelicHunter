@@ -9,18 +9,13 @@ public class PointClickMove : MonoBehaviour
     RaycastHit hit;
     NavMeshAgent agent;
     PlayerState playerState;
-    PlayerAnim playerAnim;
-
-    private void Start()
-    {
-        
-    }
+    PlayerAnimBlend playerAnim;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         playerState = GetComponent<PlayerState>();
-        playerAnim = GetComponent<PlayerAnim>();
+        playerAnim = GetComponent<PlayerAnimBlend>();
 
         playerState.OnStateChange += playerAnim.SetAnim;
     }

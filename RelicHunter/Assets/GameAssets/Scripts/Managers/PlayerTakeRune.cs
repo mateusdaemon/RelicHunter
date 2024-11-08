@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerTakeRune : MonoBehaviour, ITakeRune
+public class PlayerTakeRune : MonoBehaviour
 {
     public GameObject firstRune;
     public GameObject secondRune;

@@ -1,9 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
-public class RunePlacer : MonoBehaviour
+public class RunePlacer : MonoBehaviour, IInteract
 {
     [SerializeField] private GameObject[] runeSlots;
     // Start is called before the first frame update
@@ -40,5 +41,20 @@ public class RunePlacer : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void Interact()
+    {
+        Rune runeActive = GameManager.Instance.Inventory.activeRune;
+
+        if (runeActive == Rune.None)
+        {
+            HudManager.Instance.SetNoRunePop(true);
+            return;
+        }
+
+        HudManager.Instance.SetPlaceRunePop(true);
+        GameManager.Instance.PlaceNewRune(runeActive);
+        EnableNextRune(runeActive);
     }
 }

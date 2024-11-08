@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerTakeDamage : MonoBehaviour, ITakeDamage
 {
-
     public void TakeDamage(float damage)
     {
         GameManager.Instance.PlayerTakeDamage(damage);

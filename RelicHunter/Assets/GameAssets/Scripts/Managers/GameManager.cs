@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     public void CollectRune(Rune runeType)
     {
         Inventory.SetActiveRune(runeType);
-        
-        var player = FindObjectsOfType<MonoBehaviour>().OfType<ITakeRune>();
+
+        var player = FindObjectsOfType<PlayerTakeRune>();
 
         foreach (var rune in player)
         {
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     {
         Inventory.runesCollected++;
 
-        var player = FindObjectsOfType<MonoBehaviour>().OfType<ITakeRune>();
+        var player = FindObjectsOfType<PlayerTakeRune>();
 
         foreach (var rune in player)
         {

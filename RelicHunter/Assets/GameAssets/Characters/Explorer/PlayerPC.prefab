@@ -744,10 +744,10 @@ GameObject:
   - component: {fileID: 849936192851704401}
   - component: {fileID: 5565998337363800315}
   - component: {fileID: 1650026946945428221}
-  - component: {fileID: 5777481510402175720}
   - component: {fileID: 9063255618815683996}
   - component: {fileID: 5499629715466641663}
   - component: {fileID: 7723603670550812741}
+  - component: {fileID: 5726407152094807144}
   m_Layer: 0
   m_Name: PlayerPC
   m_TagString: Player
@@ -784,7 +784,7 @@ Animator:
   m_GameObject: {fileID: 3230495188145006652}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5d81f66a8b22d7e4b856f101e6a8220a, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4cf09f2a640953d44874f06e001859a0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 803aca0083f0b624bbda20fd823b0cf8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -882,18 +882,6 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &5777481510402175720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3230495188145006652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab587dbe5805146478eef6ea30e0a344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9063255618815683996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,6 +921,18 @@ MonoBehaviour:
   firstRune: {fileID: 7091290455629679764}
   secondRune: {fileID: 3569791329799991063}
   thirdRune: {fileID: 1677106179512023702}
+--- !u!114 &5726407152094807144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230495188145006652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f630f1d7c966a49b1ffb799fc096b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3569791329799991063
 GameObject:
   m_ObjectHideFlags: 0
