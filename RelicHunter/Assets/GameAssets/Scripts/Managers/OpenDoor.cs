@@ -8,11 +8,6 @@ public class OpenDoor : MonoBehaviour, IInteract
     [SerializeField] private int runesToOpen;
     private bool doorOpened = false;
 
-    private void Awake()
-    {
-        
-    }
-
     public void Interact()
     {
         if (doorOpened) return;
@@ -34,6 +29,5 @@ public class OpenDoor : MonoBehaviour, IInteract
     private void CloseDoor()
     {
         doorOpened = false;
-        Debug.Log("Door closed");
     }
 }
