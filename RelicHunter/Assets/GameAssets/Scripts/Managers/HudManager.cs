@@ -16,6 +16,9 @@ public class HudManager : MonoBehaviour
     public GameObject second;
     public GameObject third;
 
+    [Header("Popups")]
+    public GameObject interactPop;
+
     public static HudManager Instance { get; private set; }
 
     private void Awake()
@@ -34,5 +37,10 @@ public class HudManager : MonoBehaviour
     public void SetEnergyAmount(float amount)
     {
         energyBar.fillAmount = amount;
+    }
+
+    public void SetInteractPop(bool show)
+    {
+        interactPop.SetActive(show);
     }
 }
