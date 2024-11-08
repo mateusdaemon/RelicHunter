@@ -22,10 +22,25 @@ public class PlayerPlaceRune : MonoBehaviour
     {
         if (other.gameObject.GetComponent<RunePlacer>())
         {
+            HudManager.Instance.SetInteractPop(true);
             if (playerInput.InteractInput)
             {
-                other.gameObject.GetComponent<RunePlacer>().PlaceRune(GameManager.Instance.Inventory.activeRune);
+                if (other.gameObject.GetComponent<RunePlacer>().PlaceRune(GameManager.Instance.Inventory.activeRune))
+                {
+                    HudManager.Instance.SetPlaceRunePop(true);
+                } else
+                {
+                    HudManager.Instance.SetNoRunePop(true);
+                }
             }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<RunePlacer>())
+        {
+            HudManager.Instance.SetInteractPop(false);
         }
     }
 }

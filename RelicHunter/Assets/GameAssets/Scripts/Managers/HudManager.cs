@@ -18,6 +18,8 @@ public class HudManager : MonoBehaviour
 
     [Header("Popups")]
     public GameObject interactPop;
+    public GameObject noRunePop;
+    public GameObject placeRunePop;
 
     public static HudManager Instance { get; private set; }
 
@@ -42,5 +44,15 @@ public class HudManager : MonoBehaviour
     public void SetInteractPop(bool show)
     {
         interactPop.SetActive(show);
+    }
+
+    public void SetNoRunePop(bool show)
+    {
+        noRunePop.SetActive(show);
+    }
+
+    public void SetPlaceRunePop(bool show)
+    {
+        placeRunePop.SetActive(show);
     }
 }

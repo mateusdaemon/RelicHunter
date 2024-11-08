@@ -18,11 +18,16 @@ public class RunePlacer : MonoBehaviour
         
     }
 
-    public void PlaceRune(Rune rune)
+    public bool PlaceRune(Rune rune)
     {
-        if (rune == Rune.None) return;
+        if (rune == Rune.None)
+        {
+            return false;
+        }
+
         GameManager.Instance.PlaceNewRune(rune);
         EnableNextRune(rune);
+        return true;
     }
 
     private void EnableNextRune(Rune rune)
