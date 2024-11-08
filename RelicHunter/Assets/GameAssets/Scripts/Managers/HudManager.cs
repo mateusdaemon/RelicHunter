@@ -20,6 +20,7 @@ public class HudManager : MonoBehaviour
     public GameObject interactPop;
     public GameObject noRunePop;
     public GameObject placeRunePop;
+    public GameObject cantOpenDoorPop;
 
     public static HudManager Instance { get; private set; }
 
@@ -54,5 +55,10 @@ public class HudManager : MonoBehaviour
     public void SetPlaceRunePop(bool show)
     {
         placeRunePop.SetActive(show);
+    }
+
+    public void SetCantOpenDoor(bool show)
+    {
+        cantOpenDoorPop.SetActive(show);
     }
 }
