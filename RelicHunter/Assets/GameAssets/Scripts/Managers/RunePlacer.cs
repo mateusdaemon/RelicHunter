@@ -7,29 +7,9 @@ using UnityEngine;
 public class RunePlacer : MonoBehaviour, IInteract
 {
     [SerializeField] private GameObject[] runeSlots;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public bool PlaceRune(Rune rune)
-    {
-        if (rune == Rune.None)
-        {
-            return false;
-        }
-
-        GameManager.Instance.PlaceNewRune(rune);
-        EnableNextRune(rune);
-        return true;
-    }
+    [SerializeField] private AudioClip failSound;
+    [SerializeField] private AudioClip succSound;
+    [SerializeField] private AudioSource sounds;
 
     private void EnableNextRune(Rune rune)
     {
@@ -49,12 +29,16 @@ public class RunePlacer : MonoBehaviour, IInteract
 
         if (runeActive == Rune.None)
         {
+            sounds.clip = failSound;
+            sounds.Play();
             HudManager.Instance.SetNoRunePop(true);
             return;
         }
 
         HudManager.Instance.SetPlaceRunePop(true);
         GameManager.Instance.PlaceNewRune(runeActive);
+        sounds.clip = succSound;
+        sounds.Play();
         EnableNextRune(runeActive);
     }
 }
