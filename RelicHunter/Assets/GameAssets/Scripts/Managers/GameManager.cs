@@ -80,4 +80,18 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    internal void CurePlayer(float amount)
+    {
+        if (PlayerData.currentLife + amount > PlayerData.life)
+        {
+            PlayerData.currentLife = PlayerData.life;
+        } else
+        {
+            PlayerData.currentLife += amount;
+        }
+
+        HudManager.Instance.SetLifeAmount(PlayerData.currentLife / PlayerData.life);
+        HudManager.Instance.SetLifeValue(PlayerData.currentLife);
+    }
 }

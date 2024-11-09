@@ -9694,7 +9694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011382548710}
   m_Layer: 0
-  m_Name: BloodSprayFX
+  m_Name: BloodSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
