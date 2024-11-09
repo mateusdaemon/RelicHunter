@@ -21,9 +21,9 @@ public class PlayerInput : MonoBehaviour
         MoveInputDirection = new Vector3(horizontal, 0, vertical).normalized;
 
         JumpInput = Input.GetKeyDown(KeyCode.Space);
+        InteractInput = Input.GetKey(KeyCode.E);
         CrouchInput = Input.GetKey(KeyCode.C);
         RunInput = Input.GetKey(KeyCode.LeftShift);
         SlowWalkInput = Input.GetKey(KeyCode.LeftControl);
-        InteractInput = Input.GetKeyDown(KeyCode.E);
     }
 }

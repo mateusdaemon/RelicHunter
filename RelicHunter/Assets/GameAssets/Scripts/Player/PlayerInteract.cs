@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     PlayerInput playerInput;
+    bool justInteract = false;
 
     private void Awake()
     {
@@ -13,16 +14,27 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (playerInput.InteractInput && !justInteract)
+        {
+            IInteract interaction = other.gameObject.GetComponent<IInteract>();
+
+            if (interaction != null) 
+            {
+                justInteract = true;
+                interaction.Interact();
+                Invoke("CanInteract", 1f);
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
         IInteract interaction = other.gameObject.GetComponent<IInteract>();
 
-        if (interaction != null) 
+        if (interaction != null)
         {
             HudManager.Instance.SetInteractPop(true);
-            if (playerInput.InteractInput)
-            {
-                interaction.Interact();
-            }
-        }  
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -33,5 +45,10 @@ public class PlayerInteract : MonoBehaviour
         {
             HudManager.Instance.SetInteractPop(false);
         }
+    }
+
+    private void CanInteract()
+    {
+        justInteract = false;
     }
 }
