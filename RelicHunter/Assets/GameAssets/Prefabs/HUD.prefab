@@ -306,6 +306,7 @@ MonoBehaviour:
   interactPop: {fileID: 5468114586134926646}
   noRunePop: {fileID: 2426563384253383989}
   placeRunePop: {fileID: 8696091023780993804}
+  cantOpenDoorPop: {fileID: 1357174944901613740}
 --- !u!1 &565787845478211911
 GameObject:
   m_ObjectHideFlags: 0
