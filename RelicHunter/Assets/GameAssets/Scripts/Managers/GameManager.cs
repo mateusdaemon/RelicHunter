@@ -59,12 +59,13 @@ public class GameManager : MonoBehaviour
     internal void PlaceNewRune(Rune runeType)
     {
         Inventory.runesCollected++;
+        Inventory.activeRune = Rune.None;
 
         var player = FindObjectsOfType<PlayerTakeRune>();
 
         foreach (var rune in player)
         {
-            rune.DropActiveRune();
+            rune.DropActiveRune(runeType);
         }
     }
 

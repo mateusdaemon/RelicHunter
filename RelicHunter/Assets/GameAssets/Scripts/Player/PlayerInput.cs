@@ -24,6 +24,6 @@ public class PlayerInput : MonoBehaviour
         CrouchInput = Input.GetKey(KeyCode.C);
         RunInput = Input.GetKey(KeyCode.LeftShift);
         SlowWalkInput = Input.GetKey(KeyCode.LeftControl);
-        InteractInput = Input.GetKey(KeyCode.E);
+        InteractInput = Input.GetKeyDown(KeyCode.E);
     }
 }

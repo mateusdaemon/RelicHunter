@@ -32,13 +32,15 @@ public class RunePlacer : MonoBehaviour, IInteract
             sounds.clip = failSound;
             sounds.Play();
             HudManager.Instance.SetNoRunePop(true);
-            return;
-        }
+        } else
+        {
+            HudManager.Instance.SetPlaceRunePop(true);
+            GameManager.Instance.PlaceNewRune(runeActive);
 
-        HudManager.Instance.SetPlaceRunePop(true);
-        GameManager.Instance.PlaceNewRune(runeActive);
-        sounds.clip = succSound;
-        sounds.Play();
-        EnableNextRune(runeActive);
+            sounds.clip = succSound;
+            sounds.Play();
+
+            EnableNextRune(runeActive);
+        }
     }
 }

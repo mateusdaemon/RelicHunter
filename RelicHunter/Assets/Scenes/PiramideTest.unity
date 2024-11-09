@@ -17704,12 +17704,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1894636611679140367, guid: e50b661cd3388c64e9f5f84dbeb5e0e6, type: 3}
---- !u!1 &1507434383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1357174944901613740, guid: dc418eaa3e1e2f246badf58fe4c3ea84,
-    type: 3}
-  m_PrefabInstance: {fileID: 6074898132937083572}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1521172651
 GameObject:
   m_ObjectHideFlags: 3
@@ -27313,11 +27307,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
-    - target: {fileID: 1949934973027853348, guid: dc418eaa3e1e2f246badf58fe4c3ea84,
-        type: 3}
-      propertyPath: cantOpenDoorPop
-      value: 
-      objectReference: {fileID: 1507434383}
     - target: {fileID: 7935741709941407696, guid: dc418eaa3e1e2f246badf58fe4c3ea84,
         type: 3}
       propertyPath: m_Pivot.x

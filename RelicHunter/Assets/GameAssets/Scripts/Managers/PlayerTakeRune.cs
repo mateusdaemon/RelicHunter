@@ -8,11 +8,9 @@ public class PlayerTakeRune : MonoBehaviour
     public GameObject secondRune;
     public GameObject thirdRune;
 
-    public Rune DropActiveRune()
+    public void DropActiveRune(Rune runeType)
     {
-        Rune active = GameManager.Instance.Inventory.activeRune;
-
-        switch (active)
+        switch (runeType)
         {
             case Rune.First:
                 firstRune.SetActive(false);
@@ -26,8 +24,6 @@ public class PlayerTakeRune : MonoBehaviour
             default:
                 break;
         }
-
-        return active;
     }
 
     public void TakeRune(Rune runeType)
