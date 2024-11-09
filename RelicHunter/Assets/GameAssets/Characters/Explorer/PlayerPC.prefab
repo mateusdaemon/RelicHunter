@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3041711715920504742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2152273111455676167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Toe.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3373940999008363749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.R.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2828679793217750455}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.L.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9128456040006529414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4483322853127330933}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5107057939643388341}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sheen.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 453996100861224560}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 3435460861043217306}
   - component: {fileID: 2623149137499001347}
   - component: {fileID: 5999000783663645532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448164279738058515}
   - component: {fileID: 2265077025403385180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LOPO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5892512712225111778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7540985642193519652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3822167150993195500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Quads.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5112131004334638131}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colum base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7292709406838786750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5731041188854372901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Feet.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 403133110035595230}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5927962163213852976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Toe.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,6 +858,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5360819502992212660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3145217940257208153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2436395170256317197}
+  m_Layer: 7
+  m_Name: PlayerFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2436395170256317197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145217940257208153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5637307586062100264}
+  m_Father: {fileID: 6754182393392873074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3230495188145006652
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +908,9 @@ GameObject:
   - component: {fileID: 5499629715466641663}
   - component: {fileID: 7723603670550812741}
   - component: {fileID: 5726407152094807144}
-  m_Layer: 0
+  - component: {fileID: 1832574591982945530}
+  - component: {fileID: 523080636169835582}
+  m_Layer: 7
   m_Name: PlayerPC
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -901,6 +935,7 @@ Transform:
   - {fileID: 3107003321346025405}
   - {fileID: 4448164279738058515}
   - {fileID: 7292709406838786750}
+  - {fileID: 2436395170256317197}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &469174191802311573
@@ -956,8 +991,8 @@ Rigidbody:
   m_GameObject: {fileID: 3230495188145006652}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 3
+  m_AngularDrag: 8
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1064,6 +1099,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f630f1d7c966a49b1ffb799fc096b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1832574591982945530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230495188145006652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3758e7395a844241bbfaaa020e58a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &523080636169835582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230495188145006652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81fb1b2715e9684980e394b7da49828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodParticles: {fileID: 5635697606979798816}
 --- !u!1 &3569791329799991063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1136,7 @@ GameObject:
   - component: {fileID: 2249700873406171169}
   - component: {fileID: 790990496354177874}
   - component: {fileID: 4097506635414143081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1178,7 +1238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8339882929163747895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: staff_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7013439313588794951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.R.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2233133763801695005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1272,7 +1332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4889951810382591502}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1305,7 +1365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8774257201680157447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.L.004_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1336,7 +1396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4803400526118470145}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Quads.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1368,7 +1428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5505999621578348175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 359207253737757118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5360819502992212660}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1466,7 +1526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3107003321346025405}
   - component: {fileID: 4954362074727004461}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1578,7 +1638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6755191875253581822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1610,7 +1670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8976829544367791911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm.R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1644,7 +1704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2613573484113419703}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Feet.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1739,7 @@ GameObject:
   - component: {fileID: 579069255341416850}
   - component: {fileID: 5201065441414072626}
   - component: {fileID: 3126609080155321259}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1781,7 +1841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2767625141549471371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1813,7 +1873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3146172586762736936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1845,7 +1905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6070140420641777615}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm.L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1878,7 +1938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5699496789848131880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.R.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1910,7 +1970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7180718292614152272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.L.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1942,7 +2002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4852825809465830704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1974,7 +2034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8754693005574314115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sheen.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2006,7 +2066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711288661015786693}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.L.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6173461373944881213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Finguer.R.004_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368388584253119227}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2094,3 +2154,87 @@ Transform:
   - {fileID: 5892512712225111778}
   m_Father: {fileID: 5112131004334638131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5635560714557280206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2436395170256317197}
+    m_Modifications:
+    - target: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_Name
+      value: BloodSprayFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+--- !u!1 &5635697606979798816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5635560714557280206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5637307586062100264 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5635560714557280206}
+  m_PrefabAsset: {fileID: 0}

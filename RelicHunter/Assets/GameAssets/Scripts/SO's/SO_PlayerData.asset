@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6fee1fe82e10d4fb3bb89b363b95a8, type: 3}
   m_Name: SO_PlayerData
   m_EditorClassIdentifier: 
+  life: 10
+  currentLife: 10

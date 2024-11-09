@@ -6,6 +6,9 @@ public class OpenDoor : MonoBehaviour, IInteract
 {
     [SerializeField] private GameObject door;
     [SerializeField] private int runesToOpen;
+    [SerializeField] private AudioSource mechSounds;
+    [SerializeField] private AudioClip clickSound;
+    [SerializeField] private AudioClip closeSound;
     private bool doorOpened = false;
 
     public void Interact()
@@ -14,11 +17,15 @@ public class OpenDoor : MonoBehaviour, IInteract
         
         if (GameManager.Instance.Inventory.runesCollected < runesToOpen)
         {
+            mechSounds.clip = closeSound;
+            mechSounds.Play();
             HudManager.Instance.SetCantOpenDoor(door);
         }
 
         if (GameManager.Instance.Inventory.runesCollected >= runesToOpen)
         {
+            mechSounds.clip = clickSound;
+            mechSounds.Play();
             Animator doorAnim = door.GetComponent<Animator>();
             doorAnim.SetTrigger("open");
             doorOpened = true;

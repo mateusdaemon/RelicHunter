@@ -42,12 +42,12 @@ public class ZombieBehavior : MonoBehaviour
 
             if (detectPlayer.IsPlayerAttackable)
             {
+                zombieAttack.Attack();
                 pursueScript.enabled = false;
                 patrolScript.enabled = false;
                 isAttacking = true;
                 Invoke("ResetAttack", 1f);
                 zombieAnim.SetAnim(State.Attack);
-                zombieAttack.Attack();
             }
         }
     }

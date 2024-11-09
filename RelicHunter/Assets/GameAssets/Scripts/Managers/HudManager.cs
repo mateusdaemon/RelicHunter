@@ -61,4 +61,14 @@ public class HudManager : MonoBehaviour
     {
         cantOpenDoorPop.SetActive(show);
     }
+
+    public void SetLifeAmount(float amount)
+    {
+        lifeBar.fillAmount = amount;
+    }
+
+    public void SetLifeValue(float value)
+    {
+        lifeText.text = value.ToString() + "/10";
+    }
 }

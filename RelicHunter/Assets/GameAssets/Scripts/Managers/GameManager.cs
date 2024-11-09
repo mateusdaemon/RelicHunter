@@ -71,7 +71,9 @@ public class GameManager : MonoBehaviour
 
     internal void PlayerTakeDamage(float damage)
     {
-        PlayerData.life-=damage;
+        PlayerData.currentLife-=damage;
+        HudManager.Instance.SetLifeAmount(PlayerData.currentLife / PlayerData.life);
+        HudManager.Instance.SetLifeValue(PlayerData.currentLife);
     }
 
     internal void PlayerDied()
