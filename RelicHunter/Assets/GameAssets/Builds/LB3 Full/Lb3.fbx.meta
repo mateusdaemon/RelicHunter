@@ -3,7 +3,22 @@ guid: cf8bb0932c91c864ab58b3b6b2547daf
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pisolb3
+    second: {fileID: 2100000, guid: e36771ba1fdb114499a4c5af6c0f26d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teto
+    second: {fileID: 2100000, guid: 5d7249b7742199b44bba8098f95eb35b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall Material 2
+    second: {fileID: 2100000, guid: 2daa92932576a3640ab4de3c9a34b51b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
