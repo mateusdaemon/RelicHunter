@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: cf12958b44ed6ac43a36d5ea1c705f97
+guid: 772767ee23bb5ea40a2a475ffdeef5b1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BaseFlechas
-    second: {fileID: 2100000, guid: a25d932be15a0434699b58c699423b71, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BaseMadeira
-    second: {fileID: 2100000, guid: e36771ba1fdb114499a4c5af6c0f26d3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Flecha 1
-    second: {fileID: 2100000, guid: 86506031d323c2144ad2ea605a6d8897, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Flecha 2
-    second: {fileID: 2100000, guid: 25bde6207c2541f4986b4e67f588ad2b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
