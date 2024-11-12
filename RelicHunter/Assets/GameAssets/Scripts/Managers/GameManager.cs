@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    private Vector3 lastCheckpoint = Vector3.zero;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,6 +30,15 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CheckEnableCursor(SceneManager.GetActiveScene().name);
+        SceneManager.sceneLoaded += HandleChangeLoad;
+    }
+
+    private void HandleChangeLoad(Scene arg0, LoadSceneMode arg1)
+    {
+        if (SceneManager.GetActiveScene().name == "PiramideTest")
+        {
+            FindObjectOfType<PlayerBlend>().transform.position = lastCheckpoint;
+        }
     }
 
     public void CollectRune(Rune runeType)
@@ -50,10 +61,10 @@ public class GameManager : MonoBehaviour
 
     private void CheckEnableCursor(string scene)
     {
-        if (scene == "TestPointClick")
-            Cursor.visible = true;
-        else 
+        if (scene == "PiramideTest")
             Cursor.visible = false;
+        else 
+            Cursor.visible = true;
     }
 
     internal void PlaceNewRune(Rune runeType)
@@ -78,7 +89,7 @@ public class GameManager : MonoBehaviour
 
     internal void PlayerDied()
     {
-        
+        LoadScene("PiramideTest");
     }
 
     internal void CurePlayer(float amount)
@@ -93,5 +104,10 @@ public class GameManager : MonoBehaviour
 
         HudManager.Instance.SetLifeAmount(PlayerData.currentLife / PlayerData.life);
         HudManager.Instance.SetLifeValue(PlayerData.currentLife);
+    }
+
+    internal void SetLastCheckpoin(Vector3 position)
+    {
+        lastCheckpoint = position;
     }
 }
