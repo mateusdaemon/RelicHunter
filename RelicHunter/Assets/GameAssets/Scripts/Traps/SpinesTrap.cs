@@ -16,9 +16,9 @@ public class SpinesTrap : MonoBehaviour, ITrap
 
     public void Activate()
     {
+        trapAnim.SetAnim(TrapState.Active);
         if (playerRef != null)
         {
-            trapAnim.SetAnim(TrapState.Active);
             playerRef.GetComponent<ITakeDamage>().TakeDamage(damage);
         }
     }

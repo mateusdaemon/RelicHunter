@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 3108029315367107789}
   - component: {fileID: 8793370543252811683}
   - component: {fileID: 2656630300966887100}
+  - component: {fileID: 263320135923756337}
+  - component: {fileID: 9026749016795496770}
   m_Layer: 0
   m_Name: ArmadilhaFlechas
   m_TagString: Untagged
@@ -163,6 +165,31 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.94, y: 5.02, z: 4.14}
   m_Center: {x: -2.69, y: 0.53, z: 0.31}
+--- !u!114 &263320135923756337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3306375179746230686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c30064b0d67c8d4fbbcd696235bdb3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+--- !u!114 &9026749016795496770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3306375179746230686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593ee893b754c6044a34bb5ee1b033f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4170283146497601387
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +368,7 @@ GameObject:
   - component: {fileID: 1236069396699214762}
   - component: {fileID: 3751160145083234074}
   - component: {fileID: 3274128529566846251}
+  - component: {fileID: 3468591979536585914}
   m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
@@ -436,3 +464,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &3468591979536585914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820529734947090041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3fcc1386f2e86342adc04e239926df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowTrap: {fileID: 263320135923756337}
