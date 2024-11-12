@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,13 @@ public class PlayerBlend : MonoBehaviour
     private PlayerJump playerJump;
 
     private bool runEnable = false;
+    private CapsuleCollider playerCollider;
+
+    // Define height and center values for standing and crouching
+    private float standingHeight = 8.0f;
+    private float crouchHeight = 6.0f;
+    private Vector3 standingCenter = new Vector3(0, 4.0f, 0);
+    private Vector3 crouchCenter = new Vector3(0, 3f, 0);
 
     private void Awake()
     {
@@ -27,7 +35,7 @@ public class PlayerBlend : MonoBehaviour
         playerAnimBlend = GetComponent<PlayerAnimBlend>();
         playerMove = GetComponent<PlayerMove>();
         playerJump = GetComponent<PlayerJump>();
-        
+        playerCollider = GetComponent<CapsuleCollider>();        
 
         playerState.OnStateChange += playerAnimBlend.SetAnim;
     }
@@ -49,6 +57,8 @@ public class PlayerBlend : MonoBehaviour
             playerJump.Jump();
         }
 
+        SetPlayerColliderHeight(playerInput.CrouchInput);
+
         runEnable = playerRun.Run(playerInput.RunInput);
         playerSlow.Slow(playerInput.SlowWalkInput);
     }
@@ -57,5 +67,19 @@ public class PlayerBlend : MonoBehaviour
     {
         playerMove.Move(playerInput.MoveInputDirection, playerInput.CrouchInput, runEnable, playerInput.SlowWalkInput);
         playerOrient.Orient(playerInput.MoveInputDirection);
+    }
+
+    private void SetPlayerColliderHeight(bool crouchInput)
+    {
+        if (crouchInput)
+        {
+            playerCollider.height = crouchHeight;
+            playerCollider.center = crouchCenter;
+        }
+        else
+        {
+            playerCollider.height = standingHeight;
+            playerCollider.center = standingCenter;
+        }
     }
 }
