@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "PiramideTest")
         {
-            FindObjectOfType<PlayerBlend>().transform.position = lastCheckpoint;
+            GameObject playerRef = GameObject.FindGameObjectWithTag("Player");
+            playerRef.transform.position = lastCheckpoint;
         }
     }
 

@@ -1100,6 +1100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52964269}
   - component: {fileID: 52964270}
+  - component: {fileID: 52964271}
   m_Layer: 0
   m_Name: PointA
   m_TagString: Untagged
@@ -1143,6 +1144,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &52964271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52964268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747b2e47bfcfd234a82862b0e88cfa31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &56770426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3554,7 +3567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150339948}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.039668825, y: -0.7375696, z: 0.043494135, w: 0.67270035}
+  m_LocalRotation: {x: 0.039668825, y: -0.73756963, z: 0.04349414, w: 0.67270035}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28320,7 +28333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276826245}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.051866062, y: -0.7366592, z: 0.05686757, w: 0.67187}
+  m_LocalRotation: {x: 0.05186606, y: -0.7366592, z: 0.056867566, w: 0.67187}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34833,7 +34846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521172651}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.064078435, y: -0.7355029, z: 0.070257604, w: 0.6708154}
+  m_LocalRotation: {x: 0.06407845, y: -0.73550296, z: 0.07025762, w: 0.6708154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -36958,6 +36971,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156065294216260937, guid: b095f6b283d61c74abeb10c6d9381ffd,
+        type: 3}
+      propertyPath: slowSpeedMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
