@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,6 +7,9 @@ using UnityEngine.UI;
 
 public class HudManager : MonoBehaviour
 {
+    [Header("HUD Object")]
+    public GameObject Hud;
+
     [Header("Life UI")]
     public TextMeshProUGUI lifeText;
     public Image lifeBar;
@@ -70,5 +74,15 @@ public class HudManager : MonoBehaviour
     public void SetLifeValue(float value)
     {
         lifeText.text = value.ToString() + "/10";
+    }
+
+    internal void DisableHUD()
+    {
+        Hud.SetActive(false);
+    }
+
+    internal void EnableHUD()
+    {
+        Hud.SetActive(true);
     }
 }

@@ -6,9 +6,11 @@ using UnityEngine;
 public class PlayerTakeDamage : MonoBehaviour, ITakeDamage
 {
     private PlayerFx playerFx;
+    private PlayerState playerState;
     private void Awake()
     {
         playerFx = GetComponent<PlayerFx>();
+        playerState = GetComponent<PlayerState>();
     }
 
     public void TakeDamage(float damage)
@@ -24,6 +26,7 @@ public class PlayerTakeDamage : MonoBehaviour, ITakeDamage
 
     public void Death()
     {
+        playerState.ChangeState(State.Death);
         GameManager.Instance.PlayerDied();
     }
 }

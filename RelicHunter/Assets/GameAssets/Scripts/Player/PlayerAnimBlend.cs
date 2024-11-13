@@ -43,6 +43,7 @@ public class PlayerAnimBlend : MonoBehaviour
             case State.Hit:
                 break;
             case State.Death:
+                animator.SetBool("death", true);
                 break;
             case State.None:
                 break;

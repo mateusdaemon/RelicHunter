@@ -98,6 +98,12 @@ public class GameManager : MonoBehaviour
 
     internal void PlayerDied()
     {
+        HudManager.Instance.DisableHUD();
+        Invoke("RespawnPlayer", 3f);
+    }
+
+    private void RespawnPlayer()
+    {
         LoadScene("Piramide");
         GameObject playerRef = GameObject.FindGameObjectWithTag("Player");
         playerRef.GetComponent<PlayerTakeRune>().DropActiveRune(Inventory.activeRune);
@@ -105,6 +111,7 @@ public class GameManager : MonoBehaviour
         PlayerData.currentLife = PlayerData.life;
         HudManager.Instance.SetLifeAmount(PlayerData.currentLife / PlayerData.life);
         HudManager.Instance.SetLifeValue(PlayerData.currentLife);
+        HudManager.Instance.EnableHUD();
     }
 
     internal void CurePlayer(float amount)
