@@ -11738,6 +11738,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6227699772430416299, guid: 6b86c7f51aaede74f8b1ca61d84a76e9, type: 3}
+--- !u!1 &453192635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1388308774971078538, guid: a6fdaadced7c8e84094af79d2ecb790b,
+    type: 3}
+  m_PrefabInstance: {fileID: 871236694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &466707444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34736,6 +34742,90 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49fee221f043ed743943249db6c8fdf0, type: 3}
+--- !u!1001 &1396517692
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1818818333}
+    m_Modifications:
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.412
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856767780287825644, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: m_Name
+      value: OpenDoor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880585800186962244, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 453192635}
+    - target: {fileID: 6880585800186962244, guid: ef112689c57651b4f82957c69a80f7bf,
+        type: 3}
+      propertyPath: runesToOpen
+      value: 100
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef112689c57651b4f82957c69a80f7bf, type: 3}
+--- !u!4 &1396517693 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4091083895615569417, guid: ef112689c57651b4f82957c69a80f7bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1396517692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1399350029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45046,6 +45136,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1127777101}
+  - {fileID: 1396517693}
   - {fileID: 644534343}
   - {fileID: 1094872868}
   - {fileID: 151945829}

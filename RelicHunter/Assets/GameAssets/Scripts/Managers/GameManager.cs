@@ -87,6 +87,11 @@ public class GameManager : MonoBehaviour
         {
             rune.DropActiveRune(runeType);
         }
+
+        if (Inventory.runesCollected == 3) // Game is done
+        {
+            Inventory.runesCollected = 100;
+        }
     }
 
     internal void PlayerTakeDamage(float damage)
