@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class PointClickMove : MonoBehaviour
 {
     public LayerMask mask;
-    RaycastHit hit;
+    public RaycastHit hit;
     NavMeshAgent agent;
     PlayerState playerState;
     PlayerAnimBlend playerAnim;

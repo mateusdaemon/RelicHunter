@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
@@ -46,7 +47,15 @@ public class GameManager : MonoBehaviour
                 i++;
             }
 
+            HudManager.Instance.EnableHUD();
+
             playerRef.transform.position = lastCheckpoint;
+        } else if (SceneManager.GetActiveScene().name == "EndScene")
+        {
+            GameObject playerRef = GameObject.FindGameObjectWithTag("Player");
+            playerRef.GetComponent<PointClickMove>().hit.point = GameObject.FindGameObjectWithTag("Destiny").transform.position;
+            playerRef.GetComponent<NavMeshAgent>().destination = GameObject.FindGameObjectWithTag("Destiny").transform.position;
+            playerRef.GetComponent<PlayerState>().ChangeState(State.Walk);
         }
     }
 
@@ -90,7 +99,9 @@ public class GameManager : MonoBehaviour
 
         if (Inventory.runesCollected == 3) // Game is done
         {
-            Inventory.runesCollected = 100;
+            Inventory.runesCollected = 0;
+            HudManager.Instance.DisableHUD();
+            LoadScene("EndScene");
         }
     }
 
