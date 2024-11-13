@@ -7,28 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Gold
-    second: {fileID: 2100000, guid: a0fe45eee0d72da41b45d10113792782, type: 2}
+      name: Bola
+    second: {fileID: 2100000, guid: fc35845c6bcd1bd42898c7f447d55911, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Item1
-    second: {fileID: 2100000, guid: f0b855bfdff45664ab9f0901d8dc699c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Item2
-    second: {fileID: 2100000, guid: 2f48005a95e52994c9d5889d3cf85f2a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Item3
+      name: Bola 1.1
     second: {fileID: 2100000, guid: f0bd21aec863b094eacfb93c26e65b25, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: MolduraPortal
-    second: {fileID: 2100000, guid: fa1754446bd798844a6b08b15cbeb363, type: 2}
+      name: Bola 2.1
+    second: {fileID: 2100000, guid: 2f48005a95e52994c9d5889d3cf85f2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bola 3.1
+    second: {fileID: 2100000, guid: f0b855bfdff45664ab9f0901d8dc699c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: a0fe45eee0d72da41b45d10113792782, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
