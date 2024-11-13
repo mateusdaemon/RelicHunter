@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1596905137968795159}
   m_Layer: 0
   m_Name: Runa Roxa
-  m_TagString: Untagged
+  m_TagString: Collect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
