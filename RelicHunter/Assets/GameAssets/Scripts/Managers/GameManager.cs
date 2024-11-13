@@ -91,6 +91,9 @@ public class GameManager : MonoBehaviour
     internal void PlayerDied()
     {
         LoadScene("PiramideTest");
+        PlayerData.currentLife = PlayerData.life;
+        HudManager.Instance.SetLifeAmount(PlayerData.currentLife / PlayerData.life);
+        HudManager.Instance.SetLifeValue(PlayerData.currentLife);
     }
 
     internal void CurePlayer(float amount)
