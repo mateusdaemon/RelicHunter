@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06cf52b267fe8734993712adc872d920
+guid: bc769fb5d235c1e4abb115bad704cb92
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material Base
-    second: {fileID: 2100000, guid: 5db2abf915e82f040a1c2c1289ee8f5f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material Espinhos
-    second: {fileID: 2100000, guid: 413589203d75bb841815aed29a2e4dfb, type: 2}
+      name: Corda
+    second: {fileID: 2100000, guid: adaae67b8b89a5743b383b8f509e82c8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
