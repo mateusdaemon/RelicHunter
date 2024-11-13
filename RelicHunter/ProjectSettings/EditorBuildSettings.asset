@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PiramideTest.unity
-    guid: a9aceb30b09b4a14185181634482383c
+    path: Assets/Scenes/Piramide.unity
+    guid: 62be82bbde609764cbefd189de64cebf
   - enabled: 1
-    path: Assets/Scenes/TestPointClick.unity
-    guid: 816f96d24b8bcb74d8be06758b2cbcee
+    path: Assets/Scenes/PointClickLevel 1.unity
+    guid: 2a611ba521be34948ba857c5f77bb411
+  - enabled: 1
+    path: Assets/Scenes/PointClickLevel 2.unity
+    guid: 5c80abd3f50a2e2469e64a21f934270d
+  - enabled: 1
+    path: Assets/Scenes/PointClickLevel 3.unity
+    guid: 2ab5dcd71f726bd4a81f566d9dbf2651
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 070ce15cd64ebb045b5bcc0e60709d3d
   m_configObjects: {}

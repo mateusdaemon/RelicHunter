@@ -35,9 +35,17 @@ public class GameManager : MonoBehaviour
 
     private void HandleChangeLoad(Scene arg0, LoadSceneMode arg1)
     {
-        if (SceneManager.GetActiveScene().name == "PiramideTest")
+        if (SceneManager.GetActiveScene().name == "Piramide")
         {
             GameObject playerRef = GameObject.FindGameObjectWithTag("Player");
+
+            int i = 0;
+            while (i < Inventory.runesCollected)
+            {
+                FindObjectOfType<RunePlacer>().EnableNextRune(Rune.None);
+                i++;
+            }
+
             playerRef.transform.position = lastCheckpoint;
         }
     }
@@ -62,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     private void CheckEnableCursor(string scene)
     {
-        if (scene == "PiramideTest")
+        if (scene == "Piramide")
             Cursor.visible = false;
         else 
             Cursor.visible = true;
@@ -90,7 +98,10 @@ public class GameManager : MonoBehaviour
 
     internal void PlayerDied()
     {
-        LoadScene("PiramideTest");
+        LoadScene("Piramide");
+        GameObject playerRef = GameObject.FindGameObjectWithTag("Player");
+        playerRef.GetComponent<PlayerTakeRune>().DropActiveRune(Inventory.activeRune);
+        Inventory.activeRune = Rune.None;
         PlayerData.currentLife = PlayerData.life;
         HudManager.Instance.SetLifeAmount(PlayerData.currentLife / PlayerData.life);
         HudManager.Instance.SetLifeValue(PlayerData.currentLife);

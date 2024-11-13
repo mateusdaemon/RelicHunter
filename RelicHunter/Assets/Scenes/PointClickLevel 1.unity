@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051c4d5c6e2813b488a708f9aa7a93a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dgToLoad: PiramideTest
+  dgToLoad: Piramide
 --- !u!65 &645139065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -832,7 +832,7 @@ Transform:
   m_GameObject: {fileID: 645139063}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -20.69, y: 1.951, z: -3.107}
+  m_LocalPosition: {x: -20.83, y: 1.92, z: -3.107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1954,7 +1954,7 @@ Transform:
   m_GameObject: {fileID: 1957821105}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3036172, y: -0, z: -0, w: 0.95279413}
-  m_LocalPosition: {x: -0.78, y: 10.01, z: -17.43}
+  m_LocalPosition: {x: -0.78, y: 14.09, z: -19.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

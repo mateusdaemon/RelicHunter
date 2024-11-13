@@ -11,7 +11,7 @@ public class RunePlacer : MonoBehaviour, IInteract
     [SerializeField] private AudioClip succSound;
     [SerializeField] private AudioSource sounds;
 
-    private void EnableNextRune(Rune rune)
+    public void EnableNextRune(Rune rune)
     {
         foreach (GameObject slot in runeSlots)
         {
