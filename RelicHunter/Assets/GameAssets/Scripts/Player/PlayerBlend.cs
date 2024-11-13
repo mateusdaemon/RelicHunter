@@ -52,6 +52,8 @@ public class PlayerBlend : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.PlayerData.PlayerDead()) return;
+
         if (playerInput.JumpInput)
         {
             playerJump.Jump();
@@ -65,6 +67,8 @@ public class PlayerBlend : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Instance.PlayerData.PlayerDead()) return;
+
         playerMove.Move(playerInput.MoveInputDirection, playerInput.CrouchInput, runEnable, playerInput.SlowWalkInput);
         playerOrient.Orient(playerInput.MoveInputDirection);
     }

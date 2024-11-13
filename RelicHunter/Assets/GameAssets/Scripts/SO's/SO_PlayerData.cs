@@ -18,4 +18,9 @@ public class SO_PlayerData : ScriptableObject, ISerializationCallbackReceiver
     {
         
     }
+
+    public bool PlayerDead()
+    {
+        return currentLife <= 0;
+    }
 }
